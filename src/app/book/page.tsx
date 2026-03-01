@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import ClientHeroCanvas from '@/components/ClientHeroCanvas'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, Clock, Video } from 'lucide-react'
@@ -8,35 +8,11 @@ import { ArrowLeft, Calendar, Clock, Video } from 'lucide-react'
 const CALENDLY_URL = 'https://calendly.com/faresdolsika'
 
 export default function BookPage() {
-  const widgetRef = useRef<HTMLDivElement>(null)
-
   useEffect(() => {
-    const existing = document.querySelector('script[src*="calendly"]')
-    if (existing) {
-      if (window.Calendly && widgetRef.current) {
-        window.Calendly.initInlineWidget({
-          url: CALENDLY_URL,
-          parentElement: widgetRef.current,
-          prefill: {},
-          utm: {},
-        })
-      }
-      return
-    }
-
+    if (document.querySelector('script[src*="calendly"]')) return
     const script = document.createElement('script')
     script.src = 'https://assets.calendly.com/assets/external/widget.js'
     script.async = true
-    script.onload = () => {
-      if (window.Calendly && widgetRef.current) {
-        window.Calendly.initInlineWidget({
-          url: CALENDLY_URL,
-          parentElement: widgetRef.current,
-          prefill: {},
-          utm: {},
-        })
-      }
-    }
     document.head.appendChild(script)
   }, [])
 
@@ -91,11 +67,11 @@ export default function BookPage() {
           </div>
         </div>
 
-        {/* Calendly inline widget */}
+        {/* Calendly inline widget — standard embed method */}
         <div
-          ref={widgetRef}
-          className="rounded-xl overflow-hidden border border-neutral-800"
-          style={{ minHeight: '700px' }}
+          className="calendly-inline-widget rounded-xl border border-neutral-800"
+          data-url={CALENDLY_URL}
+          style={{ minWidth: '320px', height: '750px' }}
         />
       </section>
 
