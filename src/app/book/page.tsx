@@ -5,7 +5,7 @@ import ClientHeroCanvas from '@/components/ClientHeroCanvas'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, Clock, Video } from 'lucide-react'
 
-const CALENDLY_URL = 'https://calendly.com/faresibrahim32'
+const CALENDLY_URL = 'https://calendly.com/faresdolsika'
 
 export default function BookPage() {
   const widgetRef = useRef<HTMLDivElement>(null)
