@@ -34,7 +34,7 @@ export default function Home() {
         </p>
         <p className="text-neutral-400 max-w-2xl leading-relaxed mb-10">
           I build intelligent, full-stack applications at the intersection of software engineering
-          and machine learning. Currently researching agentic AI and LLM-based social network simulation at USF's CSSAI Labs.
+          and machine learning. Currently researching agentic AI and LLM-based social network simulation at USF's CSSAI Lab.
         </p>
 
         {/* CTA Buttons */}
