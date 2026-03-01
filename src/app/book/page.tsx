@@ -69,9 +69,9 @@ export default function BookPage() {
 
         {/* Calendly inline widget — standard embed method */}
         <div
-          className="calendly-inline-widget rounded-xl border border-neutral-800"
+          className="calendly-inline-widget"
           data-url={CALENDLY_URL}
-          style={{ minWidth: '320px', height: '750px' }}
+          style={{ minWidth: '320px', height: '900px' }}
         />
       </section>
 
