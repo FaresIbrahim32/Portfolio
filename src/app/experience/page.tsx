@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowLeft, Briefcase, MapPin } from 'lucide-react'
+import { ArrowLeft, Briefcase, MapPin, Calendar } from 'lucide-react'
 import ClientHeroCanvas from '@/components/ClientHeroCanvas'
 
 const experience = [
@@ -64,9 +64,13 @@ export default function ExperiencePage() {
               Experience
             </span>
           </h1>
-          <p className="text-neutral-400 text-lg max-w-2xl">
+          <p className="text-neutral-400 text-lg max-w-2xl mb-8">
             Internships and research roles across software development, AI/ML, and GIS.
           </p>
+          <Link href="/book"
+            className="inline-flex items-center gap-2 bg-white text-black px-5 py-2.5 rounded-lg font-medium hover:bg-neutral-200 transition-colors">
+            <Calendar size={16} /> Book a Meeting
+          </Link>
         </div>
       </section>
 
