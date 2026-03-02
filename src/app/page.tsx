@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Mail, Download, ArrowRight, Calendar } from 'lucide-react'
+import { Mail, ArrowRight, Calendar } from 'lucide-react'
 import ClientHeroCanvas from '@/components/ClientHeroCanvas'
 
 const skills = [
@@ -43,18 +43,10 @@ export default function Home() {
             className="flex items-center gap-2 bg-white text-black px-5 py-2.5 rounded-lg font-medium hover:bg-neutral-200 transition-colors">
             View Projects <ArrowRight size={16} />
           </Link>
-          <Link href="/education"
+          <Link href="/book"
             className="flex items-center gap-2 border border-neutral-700 px-5 py-2.5 rounded-lg font-medium hover:border-neutral-500 hover:bg-neutral-900 transition-colors">
-            Education <ArrowRight size={16} />
+            <Calendar size={16} /> Book a Call
           </Link>
-          <Link href="/experience"
-            className="flex items-center gap-2 border border-neutral-700 px-5 py-2.5 rounded-lg font-medium hover:border-neutral-500 hover:bg-neutral-900 transition-colors">
-            Experience <ArrowRight size={16} />
-          </Link>
-          <a href="/resume.pdf" download
-            className="flex items-center gap-2 border border-neutral-700 px-5 py-2.5 rounded-lg font-medium hover:border-neutral-500 hover:bg-neutral-900 transition-colors">
-            <Download size={16} /> Resume
-          </a>
         </div>
 
         {/* Social Links */}
