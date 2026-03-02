@@ -19,7 +19,7 @@ export async function POST(req: Request) {
   const { messages } = await req.json()
 
   const completion = await client.chat.completions.create({
-    model: 'meta-llama/llama-3.1-8b-instruct:free',
+    model: 'meta-llama/llama-3.3-70b-instruct:free',
     messages: [
       { role: 'system', content: SYSTEM_PROMPT },
       ...messages,
