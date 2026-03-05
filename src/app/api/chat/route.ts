@@ -2,30 +2,24 @@ import { NextResponse } from 'next/server'
 import OpenAI from 'openai'
 import { RESUME_CONTEXT } from '@/lib/resume-context'
 
-
 const SYSTEM_PROMPT = `You are a helpful assistant on Fares Ibrahim's personal portfolio website. You answer questions about Fares based strictly on his resume below. Be concise, friendly, and professional. If asked something not covered in the resume, say you don't have that information but visitors can reach out via faresibrahim@usf.edu.
 
 ${RESUME_CONTEXT}`
 
-// Ordered list of free models to try — falls back if one is rate-limited
 const MODELS = [
-  'deepseek/deepseek-chat:free',
-  'deepseek/deepseek-r1:free',
-  'google/gemma-2-9b-it:free',
+  'llama-3.3-70b-versatile',
+  'llama-3.1-8b-instant',
+  'gemma2-9b-it',
 ]
 
 export async function POST(req: Request) {
-  if (!process.env.OPENROUTER_API_KEY) {
+  if (!process.env.GROQ_API_KEY) {
     return NextResponse.json({ error: 'API key not configured' }, { status: 500 })
   }
 
   const client = new OpenAI({
-    apiKey: process.env.OPENROUTER_API_KEY,
-    baseURL: 'https://openrouter.ai/api/v1',
-    defaultHeaders: {
-      'HTTP-Referer': 'https://faresibrahim.me',
-      'X-Title': 'Fares Ibrahim Portfolio',
-    },
+    apiKey: process.env.GROQ_API_KEY,
+    baseURL: 'https://api.groq.com/openai/v1',
   })
 
   const { messages } = await req.json()
@@ -44,14 +38,13 @@ export async function POST(req: Request) {
       return NextResponse.json({ reply })
     } catch (err: unknown) {
       const status = (err as { status?: number }).status
-      // Retry on rate-limit, provider errors, or unavailable model
-      if (status === 429 || status === 404 || status === 400) continue
+      if (status === 429 || status === 503) continue
       throw err
     }
   }
 
   return NextResponse.json(
-    { reply: "I'm temporarily unavailable due to high demand. Please try again in a moment." },
+    { reply: "I'm temporarily unavailable. Please try again in a moment." },
     { status: 503 }
   )
 }
