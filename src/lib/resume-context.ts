@@ -51,4 +51,14 @@ PROJECTS
 2. ICalendar – Calendar and scheduling application with event management
 3. Pain/No Pain Classifier – Machine learning model to classify pain indicators from data
 4. Calories Burnt Predictor – ML regression model predicting calorie expenditure based on activity inputs
+
+EXTRA-CURRICULAR ACTIVITIES
+
+1. Treasurer – Muslim Student Association, University of South Florida
+   - Managing the organization's budget and financial records
+   - Ensuring compliance with university financial policies
+
+2. CodePath Recurring Mentor
+   - Mentored software engineering students with consistent communication and timely feedback within 48-hour response windows
+   - Facilitated regular one-on-one sessions to address technical concerns, career questions, and skill development opportunities
 `
