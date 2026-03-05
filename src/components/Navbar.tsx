@@ -20,11 +20,11 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 inset-x-0 z-50 border-b border-neutral-800/60 bg-neutral-950/80 backdrop-blur-md">
+    <nav className="fixed top-0 inset-x-0 z-50 border-b border-neutral-200/60 dark:border-neutral-800/60 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md">
       <div className="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" className="text-sm font-semibold tracking-tight text-white hover:text-neutral-300 transition-colors">
+        <Link href="/" className="text-sm font-semibold tracking-tight text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">
           Fares Ibrahim
         </Link>
 
@@ -36,8 +36,8 @@ export default function Navbar() {
               href={href}
               className={`px-3 py-1.5 rounded-lg text-sm transition-colors ${
                 pathname === href
-                  ? 'text-white bg-neutral-800'
-                  : 'text-neutral-400 hover:text-white hover:bg-neutral-800/60'
+                  ? 'text-neutral-900 dark:text-white bg-neutral-200 dark:bg-neutral-800'
+                  : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800/60'
               }`}
             >
               {label}
@@ -50,14 +50,14 @@ export default function Navbar() {
           <a
             href="/resume.pdf"
             download
-            className="flex items-center gap-1.5 text-sm text-neutral-400 hover:text-white border border-neutral-700 hover:border-neutral-500 px-3 py-1.5 rounded-lg transition-colors"
+            className="flex items-center gap-1.5 text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-300 dark:border-neutral-700 hover:border-neutral-500 dark:hover:border-neutral-500 px-3 py-1.5 rounded-lg transition-colors"
           >
             <Download size={13} /> Resume
           </a>
           <button
             onClick={toggle}
             aria-label="Toggle theme"
-            className="flex items-center justify-center w-8 h-8 rounded-lg border border-neutral-700 text-neutral-400 hover:text-white hover:border-neutral-500 transition-colors"
+            className="flex items-center justify-center w-8 h-8 rounded-lg border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-500 dark:hover:border-neutral-500 transition-colors"
           >
             {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
           </button>
@@ -68,14 +68,14 @@ export default function Navbar() {
           <button
             onClick={toggle}
             aria-label="Toggle theme"
-            className="flex items-center justify-center w-8 h-8 rounded-lg border border-neutral-700 text-neutral-400 hover:text-white transition-colors"
+            className="flex items-center justify-center w-8 h-8 rounded-lg border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
           >
             {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
           </button>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
-            className="flex items-center justify-center w-8 h-8 rounded-lg border border-neutral-700 text-neutral-400 hover:text-white transition-colors"
+            className="flex items-center justify-center w-8 h-8 rounded-lg border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
           >
             {menuOpen ? <X size={15} /> : <Menu size={15} />}
           </button>
@@ -84,7 +84,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="md:hidden border-t border-neutral-800/60 bg-neutral-950/95 px-6 py-3 flex flex-col gap-1">
+        <div className="md:hidden border-t border-neutral-200/60 dark:border-neutral-800/60 bg-white/95 dark:bg-neutral-950/95 px-6 py-3 flex flex-col gap-1">
           {links.map(({ href, label }) => (
             <Link
               key={href}
@@ -92,8 +92,8 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className={`px-3 py-2 rounded-lg text-sm transition-colors ${
                 pathname === href
-                  ? 'text-white bg-neutral-800'
-                  : 'text-neutral-400 hover:text-white hover:bg-neutral-800/60'
+                  ? 'text-neutral-900 dark:text-white bg-neutral-200 dark:bg-neutral-800'
+                  : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800/60'
               }`}
             >
               {label}
@@ -102,7 +102,7 @@ export default function Navbar() {
           <a
             href="/resume.pdf"
             download
-            className="flex items-center gap-1.5 px-3 py-2 text-sm text-neutral-400 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 px-3 py-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
           >
             <Download size={13} /> Resume
           </a>
