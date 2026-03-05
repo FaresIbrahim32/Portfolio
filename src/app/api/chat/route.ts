@@ -9,9 +9,9 @@ ${RESUME_CONTEXT}`
 
 // Ordered list of free models to try — falls back if one is rate-limited
 const MODELS = [
+  'deepseek/deepseek-chat:free',
+  'deepseek/deepseek-r1:free',
   'google/gemma-2-9b-it:free',
-  'qwen/qwen-2-7b-instruct:free',
-  'microsoft/phi-3-mini-128k-instruct:free',
 ]
 
 export async function POST(req: Request) {
