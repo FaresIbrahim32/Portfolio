@@ -9,9 +9,9 @@ ${RESUME_CONTEXT}`
 
 // Ordered list of free models to try — falls back if one is rate-limited
 const MODELS = [
-  'mistralai/mistral-small-3.1-24b-instruct:free',
-  'google/gemma-3-12b-it:free',
-  'meta-llama/llama-3.2-3b-instruct:free',
+  'meta-llama/llama-3.3-70b-instruct:free',
+  'meta-llama/llama-3.1-8b-instruct:free',
+  'mistralai/mistral-7b-instruct:free',
 ]
 
 export async function POST(req: Request) {
@@ -44,8 +44,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ reply })
     } catch (err: unknown) {
       const status = (err as { status?: number }).status
-      // Only retry on rate-limit or no-endpoint errors
-      if (status === 429 || status === 404) continue
+      // Retry on rate-limit, provider errors, or unavailable model
+      if (status === 429 || status === 404 || status === 400) continue
       throw err
     }
   }
