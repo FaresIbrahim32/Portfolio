@@ -9,9 +9,9 @@ ${RESUME_CONTEXT}`
 
 // Ordered list of free models to try — falls back if one is rate-limited
 const MODELS = [
-  'meta-llama/llama-3.3-70b-instruct:free',
-  'meta-llama/llama-3.1-8b-instruct:free',
-  'mistralai/mistral-7b-instruct:free',
+  'google/gemma-2-9b-it:free',
+  'qwen/qwen-2-7b-instruct:free',
+  'microsoft/phi-3-mini-128k-instruct:free',
 ]
 
 export async function POST(req: Request) {
