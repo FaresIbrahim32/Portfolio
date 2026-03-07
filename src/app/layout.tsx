@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description: 'Full Stack Developer, AI/ML Engineer, and Graduate Researcher at USF.',
   },
   metadataBase: new URL('https://faresibrahim.me'),
+  verification: {
+    google: '428t5ZwG5XA80R28oOb9R_AzqGT57xEXTNIyvJpXq8g',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
