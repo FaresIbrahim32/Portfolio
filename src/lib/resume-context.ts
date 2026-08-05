@@ -5,13 +5,42 @@ GitHub: https://github.com/FaresIbrahim32
 LinkedIn: https://www.linkedin.com/in/fares-ibrahim-6753471b9/
 
 EDUCATION
-- MS in Computer Science, University of South Florida, Tampa FL (Expected December 2026)
-- BS in Computer Engineering, University of South Florida, Tampa FL (August 2020 – December 2024)
+- Masters of Science in Computer Science, University of South Florida (Expected December 2026), GPA: 3.95
+- Bachelors of Science in Computer Engineering, University of South Florida (August 2020 – December 2024), GPA: 3.54
+- Relevant Coursework: Data Structures and Algorithms, Analysis of Algorithms, Embedded Systems, Operating Systems, Deep Learning, Machine Learning, Fair Machine Learning, Natural Language Processing
 
 SKILLS
-Languages: Python, JavaScript, TypeScript, C, C++, Dart, SQL
-Frameworks & Libraries: Next.js, React, Flask, Django, Flutter, TensorFlow, LangGraph, NumPy, Pandas, OpenPyXL
-Tools & Platforms: PostgreSQL, Git, QGIS, Jupyter Notebook
+Languages: C/C++, Python, JavaScript, HTML/CSS, Java, SQL, Dart
+Frameworks: React.js, Next.js, Flask, Django, Flutter, MySQL, PostgreSQL
+Libraries: NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn
+Tools: GitHub, Kaggle, HuggingFace, Colab, SmolAgents, LangGraph, Jupyter Notebook
+
+RESEARCH PUBLICATIONS
+
+1. Anchorless Diversification for Parallel LLM Ideation (arXiv:2605.30150 — Under Review at EMNLP 2026)
+   - First-author paper studying inference-time controls for diversifying LLM-generated candidate-idea pools
+   - Compares independent generation, semantic direction stratification, and anchored baselines across creative task families
+
+RESEARCH EXPERIENCE
+
+1. Adversarial Attacks on Large Language Models (Fall 2025)
+   - Co-authored "Only The Elite: Your Model Doesn't Need Many Reasons to Be Evil" under Dr. Anshuman Chhabra
+   - Developed coverage-based demonstration selection method for adversarial in-context learning attacks on LLMs
+   - Achieved 80%+ attack success rates using minimal examples (k=2-3) on Vicuna 7B, Mistral 7B, and Llama 3 8B models
+   - Evaluated framework on AdvBench and Forbidden Prompts datasets, demonstrating critical vulnerabilities in model alignment
+
+2. Fair Submodular Maximization in Streaming Settings (Spring 2025)
+   - Reproduced and extended "Fairness in Streaming Submodular Maximization: Algorithms and Hardness" under Dr. Anshuman Chhabra
+   - Implemented and evaluated Fair-Streaming, Fair-Sample-Streaming, and Fair-Greedy algorithms in C++
+   - Extended original work by validating algorithms on a novel Amazon Sales dataset, demonstrating generalizability to commercial recommendation systems
+   - Analyzed fairness-utility tradeoffs across MovieLens, Census, and Banking datasets
+
+PROJECTS
+
+1. SoccerStats - Football AI Assistant (May 2025). Comprehensive soccer statistics platform tracking weekly games, analyzing player performance from the Top 5 leagues (including G/A ratios), with an integrated AI chatbot. Tech stack: Python, Flask, HTML, CSS, SQLite, Open Source Football API, Fetch.ai AS1-mini LLM.
+2. ICalendar (May 2025). Calendar app with an AI speech assistant in a customer-support style — users can log future events and interact with a voice agent powered by Deepgram speech-to-text and ElevenLabs text-to-speech. Tech stack: HTML, CSS, Three.js, Flask, SQLite, Deepgram API, ElevenLabs API.
+3. Pain or No Pain Classifier (January–February 2025). Deep Neural Network using TensorFlow/Keras to classify pain levels from data on 5 infant subjects; applied the Adam optimizer and evaluated with confusion matrix and accuracy (85% on test data). Tech stack: Python, TensorFlow, Keras, NumPy, Pandas, Matplotlib, Scikit-learn.
+4. Calories Burnt Predictor (March 2025). XGBoost Regressor model predicting calories burned across a 1500-subject Kaggle dataset, evaluated with Mean Absolute Error and Mean Squared Error. Tech stack: Python, XGBoost, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn.
 
 EXPERIENCE
 
@@ -20,37 +49,10 @@ EXPERIENCE
    - Preprocessed raw data from medical documents on Jupyter using NumPy and Pandas
    - Modeled relationships between data by training ML models to recognize patterns and assess long-term predictions
 
-2. QGIS Support Intern – Galileo Inc, Tampa FL (January 2025 – April 2025)
-   - Debugged GIS vector layer quality assessment and reporting pipelines
-   - Used QGIS software to manually classify observables and geospatial features
-   - Evaluated output from automatic classification and improved features including shape and class
-
-3. Junior Developer Intern – DecOps LLC, Remote (May 2023 – August 2023)
+2. Junior Developer Intern – DecOps LLC, Remote (May 2023 – August 2023)
    - Partnered with UX/UI designers to enhance user experience in React-based applications
    - Developed custom components and integrated third-party APIs using JavaScript
    - Created interactive animations with Tailwind CSS for enhanced user engagement
-
-RESEARCH
-
-1. Agentic AI & Simulated Social Networks (2025 – Present)
-   - Researching cross-relational dynamics between agentic AI systems and social network structures
-   - Building synthetic social networks powered by LLM-based agents to simulate emergent behaviors, information propagation, and inter-agent influence patterns at scale
-   - Technologies: Agentic AI, LLMs, Multi-Agent Systems, LangGraph
-
-2. Adversarial Attacks on Large Language Models (Fall 2025)
-   - Co-authored "Only The Elite: Your Model Doesn't Need Many Reasons to Be Evil" under Dr. Anshuman Chhabra
-   - Achieved 80%+ attack success rates on Vicuna 7B, Mistral 7B, and Llama 3 8B using coverage-based demonstration selection
-
-3. Fair Submodular Maximization in Streaming Settings (Spring 2025)
-   - Reproduced and extended fairness algorithms in C++
-   - Validated on Amazon Sales, MovieLens, Census, and Banking datasets under Dr. Anshuman Chhabra
-
-PROJECTS
-
-1. SoccerStats – Full-stack web application for tracking and visualizing soccer statistics
-2. ICalendar – Calendar and scheduling application with event management
-3. Pain/No Pain Classifier – Machine learning model to classify pain indicators from data
-4. Calories Burnt Predictor – ML regression model predicting calorie expenditure based on activity inputs
 
 EXTRA-CURRICULAR ACTIVITIES
 
